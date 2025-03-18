@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minecraft Bot Controller</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+      @keyframes dayNightCycle {
+        0% { background: linear-gradient(to right, #87CEEB, #87CEEB); }
+        40% { background: linear-gradient(to right, #87CEEB, #FF7F50); }
+        50% { background: linear-gradient(to right, #FF7F50, #4B0082); }
+        60% { background: linear-gradient(to right, #4B0082, #191970); }
+        90% { background: linear-gradient(to right, #191970, #191970); }
+        100% { background: linear-gradient(to right, #191970, #87CEEB); }
+      }
+      .day-night-indicator {
+        animation: dayNightCycle 60s infinite linear;
+        height: 20px;
+        border-radius: 10px;
+      }
+      .console-output {
+        font-family: 'Consolas', monospace;
+        overflow-y: auto;
+        max-height: 300px;
+        color: #50fa7b;
+        background-color: #282a36;
+      }
+      .border-pixel {
+        box-shadow: inset -1px -1px 0 #555, inset 1px 1px 0 #AAA;
+      }
+      .mc-button:active {
+        transform: translateY(2px);
+        box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
